@@ -17,6 +17,11 @@ base = BasePattern()
 app = Flask(__name__)
 
 
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    return redirect(url_for('index'))
+
 @app.route('/')
 def index():
     patterns = [p.name for p in base.patterns]
@@ -29,7 +34,7 @@ def select_pattern(pattern_name):
     return redirect(url_for('index'))
 
 def start_server():
-    app.run(host="0.0.0.0", port="5432")
+    app.run(host="0.0.0.0", port="80")
 
 
 server_thread = threading.Thread(target=start_server)
