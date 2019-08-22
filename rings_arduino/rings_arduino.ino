@@ -1,4 +1,3 @@
-
 #include "opc.h"
 
 #include <memory>
@@ -24,9 +23,11 @@
 // const char* ssid     = "ESPap";
 // const char* password = "thereisnospoon";
 
-const char* ssid     = "doodleedoo";
-const char* password = "7758469943";
+// const char* ssid     = "doodleedoo";
+// const char* password = "7758469943";
 
+const char* ssid = "RingMyBell";
+const char* password = NULL;
 
 PBDriverAdapter driver;
 WiFiServer server(7890);

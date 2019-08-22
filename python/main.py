@@ -6,7 +6,7 @@ from flask import Flask, render_template, redirect, url_for
 
 from patterns.base_pattern import BasePattern
 
-IP = '172.27.0.78'
+IP = '192.168.4.5'
 #IP = '127.0.0.1'
 PORT = '7890'
 IP_PORT = IP + ':' + PORT
